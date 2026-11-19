@@ -1,0 +1,122 @@
+/* Plain CSS, no framework — every rule here is readable as-is.
+   The site is a single centered column that works on phone and desktop. */
+
+:root {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --accent: #38bdf8;
+  --border: #334155;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--accent);
+}
+
+.page {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+.hero {
+  padding: 3rem 0 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero h1 {
+  font-size: 2.75rem;
+  margin: 0 0 0.5rem;
+}
+
+.tagline {
+  font-size: 1.25rem;
+  color: var(--muted);
+  margin: 0 0 1rem;
+}
+
+.hero-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.section {
+  padding: 2.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.section h2 {
+  font-size: 1.75rem;
+  margin: 0 0 1rem;
+}
+
+.section-intro {
+  color: var(--muted);
+  margin-top: 0;
+}
+
+.skill-grid,
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.skill-card,
+.project-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+}
+
+.skill-card h3,
+.project-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+.skill-card ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--muted);
+}
+
+.project-card p {
+  margin: 0 0 0.75rem;
+  color: var(--muted);
+}
+
+.language-tag {
+  display: inline-block;
+  font-size: 0.8rem;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  border-radius: 999px;
+  padding: 0.1rem 0.6rem;
+}
+
+.contact {
+  border-bottom: none;
+}
+
+.copyright {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
